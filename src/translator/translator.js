@@ -1,18 +1,16 @@
 export default class Translator {
-	constructor(translations, language = 'en') {
-		this.language = language;
-		this.translations = translations;
+	constructor(translations, lang = 'en') {
+		this.lang = lang;
+		this.source = translations;
 	}
 
-	setLanguage(language) {
-		this.language = language;
+	setLanguage(lang) {
+		this.lang = lang;
 	}
 
 	translate(text) {
-		if (!this.translations[this.language]) {
-			return text;
-		} else {
-			return this.translations[this.language][text];
-		}
+		return (this.source[this.lang] && this.source[this.lang][text])
+			? this.source[this.lang][text]
+			: text;
 	}
 }

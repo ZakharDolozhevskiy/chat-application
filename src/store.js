@@ -1,14 +1,17 @@
 import throttle from 'lodash.throttle';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import reducers from './reducers';
+import socketMiddleware from './middlewares/socket-middleware';
 import { loadState, saveState } from './utils/localStorage'
 
 const store = createStore(
 	reducers,
 	loadState(),
-	composeWithDevTools()
+	composeWithDevTools(
+		applyMiddleware(socketMiddleware)
+	)
 );
 
 store.subscribe(throttle(
