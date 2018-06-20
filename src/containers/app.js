@@ -11,18 +11,19 @@ import themes from '../styles/themes';
 
 export class App extends React.Component {
 	render() {
+		console.log(this.props.settings.language);
 		return (
-			<BrowserRouter>
-				<TranslatorProvider language={this.props.settings.language}>
-					<ThemeProvider theme={themes[this.props.settings.theme]}>
+			<TranslatorProvider language={this.props.settings.language}>
+				<ThemeProvider theme={themes[this.props.settings.theme]}>
+					<BrowserRouter>
 						<React.Fragment>
 							<Header/>
 							<Route exact path="/" component={Chat} />
 							<Route path="/settings" component={Settings} />
 						</React.Fragment>
-					</ThemeProvider>
-				</TranslatorProvider>
-			</BrowserRouter>
+					</BrowserRouter>
+				</ThemeProvider>
+			</TranslatorProvider>
 		)
 	}
 }

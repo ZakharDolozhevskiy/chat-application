@@ -1,4 +1,4 @@
-class Translator {
+export default class Translator {
 	constructor(translations, language = 'en') {
 		this.language = language;
 		this.translations = translations;
