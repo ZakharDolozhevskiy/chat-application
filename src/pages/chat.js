@@ -2,10 +2,12 @@ import React from "react";
 import Paper from '@material-ui/core/Paper';
 import { connect } from 'react-redux';
 
-import { sendMessage } from '../actions/messages';
-import TextField from "@material-ui/core/es/TextField/TextField";
-import Button from "@material-ui/core/es/Button/Button";
 import Icon from "@material-ui/core/es/Icon/Icon";
+import Button from "@material-ui/core/es/Button/Button";
+import Message from '../components/message';
+import TextField from "@material-ui/core/es/TextField/TextField";
+
+import { sendMessage } from '../actions/messages';
 
 export class Chat extends React.Component {
 	state = { message: '' };
@@ -25,7 +27,7 @@ export class Chat extends React.Component {
 				<Paper elevation={4}>
 						<div>
 							{this.props.messages.map(
-								(m, i) => <span key={i}>{JSON.stringify(m)}</span>
+								(m, i) => <Message key={i} message={m.message} imageLinks={m.imageLinks} videoLinks={m.videoLinks}/>
 							)}
 						</div>
 					<TextField

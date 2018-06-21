@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { NavLink } from "react-router-dom";
 import TranslatorContext from '../translator/translator-context';
 
-export class Header extends React.Component {
+export class Header extends React.PureComponent {
 	render() {
 		return (
 			<TranslatorContext.Consumer>

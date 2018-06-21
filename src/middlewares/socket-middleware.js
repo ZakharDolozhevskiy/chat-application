@@ -1,5 +1,5 @@
 import { api } from '../config';
-import { formatMessage } from '../utils/formatters';
+import formatMessage from '../utils/format-message';
 import { MESSAGE_READ, MESSAGE_SEND, readMessage } from '../actions/messages';
 
 const socketMiddleware = store => {
@@ -15,12 +15,7 @@ const socketMiddleware = store => {
 		}
 
 		if (action.type === MESSAGE_SEND || action.type === MESSAGE_READ) {
-			next({
-				type: action.type,
-				payload: formatMessage(action.payload),
-				timestamp: new Date()
-			});
-			return;
+			action = formatMessage(action);
 		}
 
 		next(action)
