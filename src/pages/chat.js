@@ -74,7 +74,7 @@ export class Chat extends React.Component {
 }
 
 const stateToProps = (store) => ({
-  messages: store.messages,
+  messages: store.messages.data,
   hotKeys: store.settings.hotKeys,
   username: store.settings.username,
   timeFormat: store.settings.timeFormat

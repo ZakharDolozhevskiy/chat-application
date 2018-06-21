@@ -1,3 +1,3 @@
 export default {
-	color: 'black'
+  color: 'black'
 }

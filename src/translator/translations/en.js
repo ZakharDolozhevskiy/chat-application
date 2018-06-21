@@ -1,4 +1,4 @@
 export default {
-	'Chat': 'Chat',
-	'Settings': 'Settings'
+  'Chat': 'Chat',
+  'Settings': 'Settings'
 }

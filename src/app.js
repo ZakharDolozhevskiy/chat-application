@@ -1,26 +1,33 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from 'styled-components';
+import { ConnectedRouter } from 'connected-react-router'
 
 import Root from './pages/root';
 import themes from './styles/themes/index';
 import TranslatorProvider from './translator/translator-provider';
+import { history } from './store';
 
 export class App extends React.Component {
-	render() {
-		return (
-			<ThemeProvider theme={themes[this.props.settings.theme]}>
-				<TranslatorProvider language={this.props.settings.language}>
-					<BrowserRouter>
-						<Root/>
-					</BrowserRouter>
-				</TranslatorProvider>
-			</ThemeProvider>
-		)
-	}
+  render() {
+    const { settings, counter, path } = this.props;
+
+    return (
+      <ThemeProvider theme={themes[settings.theme]}>
+        <TranslatorProvider language={settings.language}>
+          <ConnectedRouter history={history}>
+            <Root counter={counter} path={path} />
+          </ConnectedRouter>
+        </TranslatorProvider>
+      </ThemeProvider>
+    )
+  }
 }
 
-const mapStateToProps = ({ settings }, ownProps) => ({ settings });
+const mapStateToProps = (store) => ({
+  path: store.router.location.pathname,
+  counter: store.messages.count,
+  settings: store.settings
+});
 
 export default connect(mapStateToProps)(App);

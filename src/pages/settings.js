@@ -19,86 +19,86 @@ import FormControlLabel from "@material-ui/core/es/FormControlLabel/FormControlL
 import * as Actions from '../actions/settings';
 
 export class Settings extends React.Component {
-	constructor(props) {
-		super();
-		this.state = { username: props.settings.username };
-	}
+  constructor(props) {
+    super();
+    this.state = { username: props.settings.username };
+  }
 
-	onUserNameChange = (event) => {
-		this.setState({ username: event.target.value });
-		this.saveUserNameChanges();
-	};
+  onUserNameChange = (event) => {
+    this.setState({ username: event.target.value });
+    this.saveUserNameChanges();
+  };
 
-	saveUserNameChanges = debounce(() =>
-		this.props.changeUserName(this.state.username),
-		200);
+  saveUserNameChanges = debounce(() =>
+      this.props.changeUserName(this.state.username),
+    200);
 
-	onLanguageChange = (event) => {
-		this.props.changeLanguage(event.target.value);
-	};
+  onLanguageChange = (event) => {
+    this.props.changeLanguage(event.target.value);
+  };
 
-	render() {
-		const { settings } = this.props;
+  render() {
+    const { settings } = this.props;
 
-		return (
-			<Paper elevation={4}>
-				<TextField
-					label="User name"
-					placeholder="Add user name"
-					value={this.state.username}
-					onChange={this.onUserNameChange}
-				/>
+    return (
+      <Paper elevation={4}>
+        <TextField
+          label="User name"
+          placeholder="Add user name"
+          value={this.state.username}
+          onChange={this.onUserNameChange}
+        />
 
-				<Typography component="p">Interface colors</Typography>
-				<RadioGroup
-					value={settings.theme}
-					onChange={this.props.changeTheme}>
-					<FormControlLabel value="light" label="Light" control={<Radio />}/>
-					<FormControlLabel value="dark" label="Dark" control={<Radio />}/>
-				</RadioGroup>
+        <Typography component="p">Interface colors</Typography>
+        <RadioGroup
+          value={settings.theme}
+          onChange={this.props.changeTheme}>
+          <FormControlLabel value="light" label="Light" control={<Radio/>}/>
+          <FormControlLabel value="dark" label="Dark" control={<Radio/>}/>
+        </RadioGroup>
 
-				<Typography component="p">Clock displays</Typography>
-				<RadioGroup
-					value={settings.timeFormat}
-					onChange={this.props.changeTimeFormat}>
-					<FormControlLabel value='12' label="12 Hours" control={<Radio />}/>
-					<FormControlLabel value='24' label="24 Hours" control={<Radio />}/>
-				</RadioGroup>
-				<Typography component="p">Send message on CTRL+ENTER</Typography>
-				<RadioGroup
-					value={`${settings.hotKeys}`}
-					onChange={this.props.toggleHotKeys}>
-					<FormControlLabel value="true" label="On" control={<Radio />}/>
-					<FormControlLabel value="false" label="Off" control={<Radio />}/>
-				</RadioGroup>
-				<FormControl>
-					<InputLabel htmlFor="lang">Language</InputLabel>
-					<Select
-						value={settings.language}
-						inputProps={{ id: 'lang' }}
-						onChange={this.onLanguageChange}>
-						<MenuItem value="en">English</MenuItem>
-						<MenuItem value="ru">Russian</MenuItem>
-					</Select>
-				</FormControl>
-				<Button variant="outlined" onClick={this.props.resetSettings}>
-					Reset
-				</Button>
-			</Paper>
-		)
-	}
+        <Typography component="p">Clock displays</Typography>
+        <RadioGroup
+          value={settings.timeFormat}
+          onChange={this.props.changeTimeFormat}>
+          <FormControlLabel value='12' label="12 Hours" control={<Radio/>}/>
+          <FormControlLabel value='24' label="24 Hours" control={<Radio/>}/>
+        </RadioGroup>
+        <Typography component="p">Send message on CTRL+ENTER</Typography>
+        <RadioGroup
+          value={`${settings.hotKeys}`}
+          onChange={this.props.toggleHotKeys}>
+          <FormControlLabel value="true" label="On" control={<Radio/>}/>
+          <FormControlLabel value="false" label="Off" control={<Radio/>}/>
+        </RadioGroup>
+        <FormControl>
+          <InputLabel htmlFor="lang">Language</InputLabel>
+          <Select
+            value={settings.language}
+            inputProps={{ id: 'lang' }}
+            onChange={this.onLanguageChange}>
+            <MenuItem value="en">English</MenuItem>
+            <MenuItem value="ru">Russian</MenuItem>
+          </Select>
+        </FormControl>
+        <Button variant="outlined" onClick={this.props.resetSettings}>
+          Reset
+        </Button>
+      </Paper>
+    )
+  }
 }
 
 const mapDispatchToProps = {
-	changeTheme: Actions.changeTheme,
-	toggleHotKeys: Actions.toggleHotKeys,
-	changeUserName: Actions.changeUserName,
-	changeLanguage: Actions.changeLanguage,
-	changeTimeFormat: Actions.changeTimeFormat,
-	resetSettings: Actions.resetSettings
+  changeTheme: Actions.changeTheme,
+  toggleHotKeys: Actions.toggleHotKeys,
+  changeUserName: Actions.changeUserName,
+  changeLanguage: Actions.changeLanguage,
+  changeTimeFormat: Actions.changeTimeFormat,
+  resetSettings: Actions.resetSettings
 };
 
 export default connect(
-	({ settings }, ownProps) => ({ settings }),
-	mapDispatchToProps)
+  ({ settings }, ownProps) => ({ settings }),
+  mapDispatchToProps)
 (Settings);

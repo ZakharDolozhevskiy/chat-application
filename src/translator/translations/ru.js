@@ -1,4 +1,4 @@
 export default {
-	'Chat': 'Чат',
-	'Settings': 'Настройки'
+  'Chat': 'Чат',
+  'Settings': 'Настройки'
 }
