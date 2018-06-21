@@ -1,28 +1,27 @@
-import throttle from 'lodash.throttle';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { createBrowserHistory } from 'history';
 import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 
 import reducers from './reducers';
+import { loadState } from './modules/localStorage';
 import socketMiddleware from './middlewares/socket-middleware';
-import { loadState, saveState } from './utils/localStorage'
+import storageMiddleware from './middlewares/storage-middleware';
+import messagesMiddleware from './middlewares/messages-middleware';
 
 export const history = createBrowserHistory();
-
-const middlewares = applyMiddleware(
-  socketMiddleware,
-  routerMiddleware(history)
-);
 
 const store = createStore(
   connectRouter(history)(reducers),
   loadState(),
-  composeWithDevTools(middlewares)
+  composeWithDevTools(
+    applyMiddleware(
+      socketMiddleware,
+      storageMiddleware,
+      messagesMiddleware,
+      routerMiddleware(history)
+    )
+  )
 );
-
-store.subscribe(throttle(
-  () => saveState({ settings: store.getState().settings })
-), 1000);
 
 export default store;

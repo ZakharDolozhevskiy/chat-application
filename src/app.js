@@ -4,9 +4,9 @@ import { ThemeProvider } from 'styled-components';
 import { ConnectedRouter } from 'connected-react-router'
 
 import Root from './pages/root';
-import themes from './styles/themes/index';
-import TranslatorProvider from './translator/translator-provider';
+import themes from './themes/index';
 import { history } from './store';
+import TranslatorProvider from './translator/translator-provider';
 
 export class App extends React.Component {
   render() {
