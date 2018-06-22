@@ -1,38 +1,48 @@
-import React from "react";
+import React from 'react';
+import Badge from '@material-ui/core/Badge';
+import Button from '@material-ui/core/Button';
 import styled from 'styled-components';
 import { NavLink } from "react-router-dom";
+
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 
 import { routes } from '../config';
 import TranslatorContext from '../translator/translator-context';
 
 export class Header extends React.PureComponent {
-  render() {
-    const { counter, path } = this.props;
+  withBadge = (button) =>
+    (this.props.path !== routes.MAIN && this.props.counter > 0)
+      ? <Badge color="primary" badgeContent={this.props.counter}>
+          {button}
+        </Badge>
+      : button;
 
+  render() {
     return (
       <TranslatorContext.Consumer>
-        {translator => (
-          <div className={this.props.className}>
-            <NavLink exact to="/">
-              <span>
-                {translator.translate('Chat')}
-                {path !== routes.MAIN && counter > 0 && counter}
-              </span>
-            </NavLink>
-            <NavLink exact to="/settings">
-              {translator.translate('Settings')}
-            </NavLink>
-          </div>)}
+        {({ translate }) => (
+          <AppBar position="static" color="inherit" className={this.props.className}>
+            <Toolbar>
+              <NavLink exact to="/" className="nav-link">
+                {this.withBadge(<Button color="inherit">{translate('Chat')}</Button>)}
+              </NavLink>
+              <NavLink exact to="/settings" className="nav-link">
+                <Button color="inherit">{translate('Settings')}</Button>
+              </NavLink>
+            </Toolbar>
+          </AppBar>)}
       </TranslatorContext.Consumer>
     )
   }
 }
 
 export default styled(Header)`
-  display: flex;
-  padding: 16px 24px;
-  border-radius: 2px;
-  background-color: ${props => props.theme.main};
+  .nav-link {
+    display: inline-block;
+    margin-right: 8px;
+    text-decoration: none;
+  }
   
   .active {
     color: red;

@@ -23,7 +23,7 @@ export const formatMessage = (action) => {
 
   let payload = {
     ...action.payload,
-    message,
+    message: message.trim(),
     timestamp: moment(),
     imageLinks: imageLinks.length ? imageLinks : null,
     videoLinks: videoLinks.length ? videoLinks : null,

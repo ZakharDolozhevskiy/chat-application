@@ -4,11 +4,11 @@ export default class Translator {
     this.source = translations;
   }
 
-  setLanguage(lang) {
+  setLanguage = lang => {
     this.lang = lang;
-  }
+  };
 
-  translate(text) {
+  translate = (text) => {
     return (this.source[this.lang] && this.source[this.lang][text])
       ? this.source[this.lang][text]
       : text;

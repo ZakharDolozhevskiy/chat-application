@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.2.2",
+    "classnames": "^2.2.6",
     "connected-react-router": "^4.3.0",
     "emoji-picker-react": "^2.0.4",
     "history": "^4.7.2",
