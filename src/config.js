@@ -7,3 +7,8 @@ export const routes = {
   MAIN: '/',
   SETTINGS: '/settings'
 };
+
+export const timeFormats = {
+  12: 'hh:mm a',
+  24: 'HH:mm'
+};

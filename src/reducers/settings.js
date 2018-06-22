@@ -1,33 +1,27 @@
-import {
-  CHANGE_THEME,
-  RESET_SETTINGS,
-  CHANGE_LANGUAGE,
-  CHANGE_USERNAME,
-  TOGGLE_HOT_KEYS,
-  CHANGE_TIME_FORMAT
-} from '../actions/settings';
+import { timeFormats } from '../config';
+import * as Types from '../actions/settings';
 
 const defaultSettings = {
   username: 'Newcomer',
   theme: 'light',
   hotKeys: true,
   language: 'en',
-  timeFormat: '24'
+  timeFormat: timeFormats[24]
 };
 
 const settings = (state = defaultSettings, action) => {
   switch (action.type) {
-    case CHANGE_THEME:
+    case Types.CHANGE_THEME:
       return { ...state, theme: action.payload };
-    case CHANGE_LANGUAGE:
+    case Types.CHANGE_LANGUAGE:
       return { ...state, language: action.payload };
-    case CHANGE_USERNAME:
+    case Types.CHANGE_USERNAME:
       return { ...state, username: action.payload };
-    case CHANGE_TIME_FORMAT:
+    case Types.CHANGE_TIME_FORMAT:
       return { ...state, timeFormat: action.payload };
-    case TOGGLE_HOT_KEYS:
+    case Types.TOGGLE_HOT_KEYS:
       return { ...state, hotKeys: !state.hotKeys };
-    case RESET_SETTINGS:
+    case Types.RESET_SETTINGS:
       return { ...defaultSettings };
     default:
       return state

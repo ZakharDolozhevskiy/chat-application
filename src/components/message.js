@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import Linkify from 'react-linkify';
+import ReactEmoji from 'react-emoji';
 import ReactPlayer from 'react-player';
 
 export class Message extends React.PureComponent {
@@ -11,15 +12,18 @@ export class Message extends React.PureComponent {
     links.map((link, idx) => <ReactPlayer url={link} key={idx}/>);
 
   render() {
-    const {message, videoLinks, imageLinks, className} = this.props;
+    const { message, videoLinks, imageLinks, className, timestamp, user, timeFormat } = this.props;
 
     return (
       <div className={className}>
         <div className="circle"/>
+        <span>{user}</span>
+        ---
+        <span>{timestamp.format(timeFormat)}</span>
         <div className="text">
           {imageLinks && this.renderImages(imageLinks)}
           {videoLinks && this.renderVideo(videoLinks)}
-          <Linkify>{message}</Linkify>
+          <Linkify>{ReactEmoji.emojify(message)}</Linkify>
         </div>
       </div>
     );

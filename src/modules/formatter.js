@@ -1,7 +1,9 @@
-const SPACE = ' ';
-const DOUBLE_SPACE = /\s\s/g;
+import moment from 'moment';
+
 const IMG = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png|svg)/i;
 const YOUTUBE_LINK = /((http(s)?:\/\/)?)(www\.)?(youtube\.com\/)[\S]+/i;
+const DOUBLE_SPACE = /\s\s/g;
+const SPACE = ' ';
 
 const extractTo = source => match => {
   source.push(match);
@@ -20,7 +22,9 @@ export const formatMessage = (action) => {
   }
 
   let payload = {
+    ...action.payload,
     message,
+    timestamp: moment(),
     imageLinks: imageLinks.length ? imageLinks : null,
     videoLinks: videoLinks.length ? videoLinks : null,
   };

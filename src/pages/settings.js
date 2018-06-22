@@ -16,6 +16,7 @@ import InputLabel from "@material-ui/core/es/InputLabel/InputLabel";
 import FormControl from "@material-ui/core/es/FormControl/FormControl";
 import FormControlLabel from "@material-ui/core/es/FormControlLabel/FormControlLabel";
 
+import { timeFormats } from '../config';
 import * as Actions from '../actions/settings';
 
 export class Settings extends React.Component {
@@ -61,8 +62,8 @@ export class Settings extends React.Component {
         <RadioGroup
           value={settings.timeFormat}
           onChange={this.props.changeTimeFormat}>
-          <FormControlLabel value='12' label="12 Hours" control={<Radio/>}/>
-          <FormControlLabel value='24' label="24 Hours" control={<Radio/>}/>
+          <FormControlLabel value={timeFormats[12]} label="12 Hours" control={<Radio/>}/>
+          <FormControlLabel value={timeFormats[24]} label="24 Hours" control={<Radio/>}/>
         </RadioGroup>
         <Typography component="p">Send message on CTRL+ENTER</Typography>
         <RadioGroup

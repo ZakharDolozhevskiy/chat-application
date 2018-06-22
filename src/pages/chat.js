@@ -2,6 +2,7 @@ import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import throttle from 'lodash.throttle';
 import {connect} from 'react-redux';
+import EmojiPicker from 'emoji-picker-react';
 
 import Icon from "@material-ui/core/es/Icon/Icon";
 import Button from "@material-ui/core/es/Button/Button";
@@ -15,6 +16,9 @@ export class Chat extends React.Component {
 
   onInputChange = (event) =>
     this.setState({ message: event.target.value });
+
+  onEmojiSelect = (code, { name }) =>
+    this.setState({ message: `${this.state.message} :${name}:` });
 
   trackHotKeys = throttle((event) => {
     if (this.props.hotKeys && this.isSendMsgComb(event)) {
@@ -53,7 +57,7 @@ export class Chat extends React.Component {
         <Paper elevation={4}>
           <div>
             {this.props.messages.map(
-              (m, i) => <Message key={i} message={m.message} imageLinks={m.imageLinks} videoLinks={m.videoLinks}/>
+              (m, i) => <Message key={i} timeFormat={this.props.timeFormat} {...m}/>
             )}
           </div>
           <TextField
@@ -67,6 +71,7 @@ export class Chat extends React.Component {
           <Button variant="fab" color="secondary" aria-label="edit" onClick={this.sendMessage}>
             <Icon>edit_icon</Icon>
           </Button>
+          <EmojiPicker onEmojiClick={this.onEmojiSelect}/>
         </Paper>
       </div>
     )
