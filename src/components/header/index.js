@@ -1,19 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+import { NavLink } from "react-router-dom";
 import Badge from '@material-ui/core/Badge';
 import Button from '@material-ui/core/Button';
-import styled from 'styled-components';
-import { NavLink } from "react-router-dom";
-
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
-import { routes } from '../config';
-import TranslatorContext from '../translator/translator-context';
+import { routes } from '../../config';
+import TranslatorContext from '../../translator/translator-context';
 
-export class Header extends React.PureComponent {
+import styles from './styles';
+
+export class Header extends React.Component {
   withBadge = (button) =>
     (this.props.path !== routes.MAIN && this.props.counter > 0)
-      ? <Badge color="primary" badgeContent={this.props.counter}>
+      ? <Badge className="badge" badgeContent={this.props.counter}>
           {button}
         </Badge>
       : button;
@@ -21,7 +24,7 @@ export class Header extends React.PureComponent {
   render() {
     return (
       <TranslatorContext.Consumer>
-        {({ translate }) => (
+        {(translate) => (
           <AppBar position="static" color="inherit" className={this.props.className}>
             <Toolbar>
               <NavLink exact to="/" className="nav-link">
@@ -37,14 +40,10 @@ export class Header extends React.PureComponent {
   }
 }
 
-export default styled(Header)`
-  .nav-link {
-    display: inline-block;
-    margin-right: 8px;
-    text-decoration: none;
-  }
-  
-  .active {
-    color: red;
-  }
-`;
+Header.propTypes = {
+  className: PropTypes.string,
+  counter: PropTypes.number.isRequired,
+  path: PropTypes.oneOf([routes.MAIN, routes.SETTINGS]).isRequired
+};
+
+export default styled(Header)`${styles}`;

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Route, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { Route } from 'react-router-dom';
 
 import Chat from './chat';
-import Header from '../components/header';
+import Header from '../components/header/index';
 import Settings from './settings';
 import { routes } from '../config';
 
@@ -15,10 +16,18 @@ const root = ({ path, counter, className }) => (
   </section>
 );
 
+root.propTypes = {
+  path: PropTypes.string.isRequired,
+  counter: PropTypes.number.isRequired,
+  className: PropTypes.string
+};
+
 export default styled(root)`
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     min-height: 100%;
     margin: 0 auto;
+    color: ${p => p.theme.textColor};
+    background-color: ${p => p.theme.backgroundColor};
 `;

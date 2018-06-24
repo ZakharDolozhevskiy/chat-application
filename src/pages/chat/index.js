@@ -1,27 +1,32 @@
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
-import throttle from 'lodash.throttle';
-import {connect} from 'react-redux';
-import EmojiPicker from 'emoji-picker-react';
 import styled from 'styled-components';
+import throttle from 'lodash.throttle';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
 import Icon from '@material-ui/core/Icon';
+import Tooltip from '@material-ui/core/Tooltip';
 import Popover from '@material-ui/core/Popover';
-import IconButton from '@material-ui/core/IconButton';
-import Button from "@material-ui/core/es/Button/Button";
-import Message from '../components/message/index';
 import TextField from "@material-ui/core/es/TextField/TextField";
-import TranslatorContext from '../translator/translator-context';
-import { sendMessage } from '../actions/messages';
-import { isCtrlKey, isEnterKey } from '../modules/helpers';
+import IconButton from '@material-ui/core/IconButton';
+import EmojiPicker from 'emoji-picker-react';
+
+import Message from '../../components/message/index';
+import { sendMessage } from '../../actions/messages';
+import TranslatorContext from '../../translator/translator-context';
+import { isCtrlKey, isEnterKey } from '../../modules/helpers';
+
+import styles from './styles';
 
 export class Chat extends React.Component {
   constructor() {
     super();
-
     this.input = React.createRef();
     this.msgList = React.createRef();
-
     this.state = { message: '', anchorEl: null };
+    // Popover configurations
+    this.anchorOrigin = { vertical: 'top', horizontal: 'left' };
+    this.transformOrigin = { vertical: 'bottom', horizontal: 'right' };
   }
 
   showPopover = (ev) =>
@@ -43,7 +48,7 @@ export class Chat extends React.Component {
     if (this.props.hotKeys && isEnterKey(ev) && isCtrlKey(ev)) {
       this.sendMessage();
     }
-  }, 100);
+  }, 400);
 
   sendMessage = () => {
     if (this.state.message) {
@@ -52,10 +57,7 @@ export class Chat extends React.Component {
         username: this.props.username
       });
 
-      this.setState({
-        message: '',
-        anchorEl: null
-      });
+      this.setState({ message: '', anchorEl: null });
     }
   };
 
@@ -64,8 +66,8 @@ export class Chat extends React.Component {
       this.msgList.current.scrollHeight;
   };
 
-  componentDidUpdate(prev) {
-    if (prev.messages.length !== this.props.messages.length) {
+  componentDidUpdate(prevProps) {
+    if (prevProps.messages.length !== this.props.messages.length) {
       this.updateScrollPosition();
     }
   }
@@ -83,40 +85,41 @@ export class Chat extends React.Component {
   }
 
   render() {
+    const { messages, timeFormat, className } = this.props;
+
     return (
       <TranslatorContext.Consumer>
-        {translator => (
-          <div className={this.props.className}>
+        {translate => (
+          <div className={className}>
             <div className="messages" ref={this.msgList}>
-              {this.props.messages.map((m, i) => <Message key={i} timeFormat={this.props.timeFormat} {...m}/>)}
+              {messages.map((msg, idx) =>
+                <Message key={idx} timeFormat={timeFormat} {...msg} />)}
             </div>
             <div className="controls">
               <TextField
                 autoFocus
-                className="text-input"
-                inputRef={this.input}
                 value={this.state.message}
+                inputRef={this.input}
                 onChange={this.onInputChange}
-                placeholder={translator.translate('Start typing...')}
+                className="text-input"
+                placeholder={translate('Your message')}
               />
-              <IconButton onClick={this.showPopover}>
-                <Icon>insert_emoticon</Icon>
-              </IconButton>
-              <IconButton onClick={this.sendMessage}>
-                <Icon>send</Icon>
-              </IconButton>
+              <Tooltip title={translate('Emoji')}>
+                <IconButton onClick={this.showPopover}>
+                  <Icon>insert_emoticon</Icon>
+                </IconButton>
+              </Tooltip>
+              <Tooltip title={translate('Send')}>
+                <IconButton onClick={this.sendMessage}>
+                  <Icon>create</Icon>
+                </IconButton>
+              </Tooltip>
               <Popover
                 open={!!this.state.anchorEl}
                 anchorEl={this.state.anchorEl}
                 onClose={this.closePopover}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'left',
-                }}
-                transformOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'right',
-                }}
+                anchorOrigin={this.anchorOrigin}
+                transformOrigin={this.transformOrigin}
               >
                 <EmojiPicker onEmojiClick={this.onEmojiSelect}/>
               </Popover>
@@ -135,32 +138,13 @@ const stateToProps = (store) => ({
   timeFormat: store.settings.timeFormat
 });
 
-const styledChat = styled(Chat)`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 64px);
-  
-  .messages {
-    height: 100%;
-    max-height: 100%;
-    overflow-y: auto;
-  }
-  
-  .controls {
-    display: flex;
-    padding: 16px;
-    justify-content: space-between;
-    
-    button {
-      z-index: 2000;
-    }
-  }
-  
-  .text-input {
-    width: 100%;
-    margin-right: 0.02816901%;
-  }
-`;
+Chat.propTypes = {
+  messages: PropTypes.array,
+  hotKeys: PropTypes.bool.isRequired,
+  username: PropTypes.string.isRequired,
+  timeFormat: PropTypes.string.isRequired
+};
+
+const styledChat = styled(Chat)`${styles}`;
 
 export default connect(stateToProps, { sendMessage })(styledChat);

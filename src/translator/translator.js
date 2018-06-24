@@ -1,5 +1,5 @@
 export default class Translator {
-  constructor(translations, lang = 'en') {
+  constructor(translations, lang) {
     this.lang = lang;
     this.source = translations;
   }

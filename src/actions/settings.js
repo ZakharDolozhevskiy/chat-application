@@ -10,23 +10,23 @@ export const changeUserName = (text) => ({
   payload: text
 });
 
-export const changeTheme = (ev, theme) => ({
+export const changeTheme = (theme) => ({
   type: CHANGE_THEME,
   payload: theme
 });
 
-export const changeTimeFormat = (ev, timeFormat) => ({
+export const changeTimeFormat = (timeFormat) => ({
   type: CHANGE_TIME_FORMAT,
   payload: timeFormat
-});
-
-export const toggleHotKeys = (ev, timeFormat) => ({
-  type: TOGGLE_HOT_KEYS,
 });
 
 export const changeLanguage = (language) => ({
   type: CHANGE_LANGUAGE,
   payload: language
+});
+
+export const toggleHotKeys = () => ({
+  type: TOGGLE_HOT_KEYS,
 });
 
 export const resetSettings = () => ({
