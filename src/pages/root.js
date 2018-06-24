@@ -11,7 +11,7 @@ import { routes } from '../config';
 const root = ({ path, counter, className }) => (
   <section className={className}>
     <Header counter={counter} path={path}/>
-    <Route exact path={routes.MAIN} component={Chat}/>
+    <Route path={routes.MAIN} component={Chat}/>
     <Route path={routes.SETTINGS} component={Settings}/>
   </section>
 );

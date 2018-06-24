@@ -12,6 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import EmojiPicker from 'emoji-picker-react';
 
 import Message from '../../components/message/index';
+import { routes } from '../../config';
 import { sendMessage } from '../../actions/messages';
 import TranslatorContext from '../../translator/translator-context';
 import { isCtrlKey, isEnterKey } from '../../modules/helpers';
@@ -62,8 +63,11 @@ export class Chat extends React.Component {
   };
 
   updateScrollPosition = () => {
-    this.msgList.current.scrollTop =
-      this.msgList.current.scrollHeight;
+    // Prevent scroll position change if the chat view is inactive
+    if (this.props.path === routes.MAIN) {
+      this.msgList.current.scrollTop =
+        this.msgList.current.scrollHeight;
+    }
   };
 
   componentDidUpdate(prevProps) {
@@ -90,7 +94,7 @@ export class Chat extends React.Component {
     return (
       <TranslatorContext.Consumer>
         {translate => (
-          <div className={className}>
+          <section className={className}>
             <div className="messages" ref={this.msgList}>
               {messages.map((msg, idx) =>
                 <Message key={idx} timeFormat={timeFormat} {...msg} />)}
@@ -124,7 +128,7 @@ export class Chat extends React.Component {
                 <EmojiPicker onEmojiClick={this.onEmojiSelect}/>
               </Popover>
             </div>
-          </div>
+          </section>
         )}
       </TranslatorContext.Consumer>
     )
@@ -135,10 +139,12 @@ const stateToProps = (store) => ({
   messages: store.messages.data,
   hotKeys: store.settings.hotKeys,
   username: store.settings.username,
-  timeFormat: store.settings.timeFormat
+  path: store.router.location.pathname,
+  timeFormat: store.settings.timeFormat,
 });
 
 Chat.propTypes = {
+  path: PropTypes.string,
   messages: PropTypes.array,
   hotKeys: PropTypes.bool.isRequired,
   username: PropTypes.string.isRequired,

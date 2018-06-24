@@ -1,10 +1,11 @@
 import { css } from 'styled-components';
+import { headerHeight } from '../../components/header/styles';
 
 const styles = css`
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 64px);
+  height: calc(100vh - ${headerHeight});
   color: ${p => p.theme.textColor};
   background-color: ${p => p.theme.backgroundColor};
 

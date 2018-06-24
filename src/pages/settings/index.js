@@ -26,45 +26,47 @@ export class Settings extends React.Component {
       <TranslatorContext.Consumer>
         {translate => (
           <section className={className}>
-            <TextField
-              fullWidth
-              value={settings.username}
-              className="username-field"
-              label={translate('Username')}
-              placeholder={translate('Add username')}
-              onChange={this.onUserNameChange}
-            />
-            <ThemesSelection
-              translate={translate}
-              current={settings.theme}
-              language={settings.language}
-              onChange={this.props.changeTheme}
-            />
-            <FormatSelection
-              translate={translate}
-              timeFormat={settings.timeFormat}
-              language={settings.language}
-              onChange={this.props.changeTimeFormat}
-            />
-            <ShortcutsSelection
-              translate={translate}
-              hotKeys={settings.hotKeys}
-              language={settings.language}
-              onChange={this.props.toggleHotKeys}
-            />
-            <LanguageSelection
-              translate={translate}
-              language={settings.language}
-              onChange={this.props.changeLanguage}
-            />
-            <Button
-              variant="outlined"
-              className="reset-btn"
-              color="inherit"
-              onClick={this.props.resetSettings}
-            >
-              {translate('Reset to default')}
-            </Button>
+            <div className="settings-box">
+              <TextField
+                fullWidth
+                value={settings.username}
+                className="username-field"
+                label={translate('Username')}
+                placeholder={translate('Add username')}
+                onChange={this.onUserNameChange}
+              />
+              <ThemesSelection
+                translate={translate}
+                current={settings.theme}
+                language={settings.language}
+                onChange={this.props.changeTheme}
+              />
+              <FormatSelection
+                translate={translate}
+                timeFormat={settings.timeFormat}
+                language={settings.language}
+                onChange={this.props.changeTimeFormat}
+              />
+              <ShortcutsSelection
+                translate={translate}
+                hotKeys={settings.hotKeys}
+                language={settings.language}
+                onChange={this.props.toggleHotKeys}
+              />
+              <LanguageSelection
+                translate={translate}
+                language={settings.language}
+                onChange={this.props.changeLanguage}
+              />
+              <Button
+                variant="outlined"
+                className="reset-btn"
+                color="inherit"
+                onClick={this.props.resetSettings}
+              >
+                {translate('Reset to default')}
+              </Button>
+            </div>
           </section>
         )}
       </TranslatorContext.Consumer>

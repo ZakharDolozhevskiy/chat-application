@@ -1,5 +1,7 @@
 import { css } from 'styled-components';
 
+export const headerHeight = '64px';
+
 export default css`
   background-color: #2196f3 !important;
 
