@@ -2,27 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Radio from '@material-ui/core/es/Radio/Radio';
+import Radio from '@material-ui/core/Radio/Radio';
 import Typography from '@material-ui/core/Typography';
-import RadioGroup from '@material-ui/core/es/RadioGroup/RadioGroup';
-import FormControlLabel from '@material-ui/core/es/FormControlLabel/FormControlLabel';
+import RadioGroup from '@material-ui/core/RadioGroup/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel/FormControlLabel';
 
 import { baseStyles } from './styles';
 import { themes } from '../../config';
 
-class ThemesSelection extends React.PureComponent {
+export class ThemesSelection extends React.PureComponent {
   onChange = (event, theme) =>
     this.props.onChange(theme);
 
   render() {
-    const { className, translate, current } = this.props;
+    const { className, translate, currentTheme } = this.props;
 
     return (
       <div className={className}>
         <Typography component="p" color="inherit" className="label">
           {translate('Interface colors')}
         </Typography>
-        <RadioGroup value={current} onChange={this.onChange} className="controls">
+        <RadioGroup value={currentTheme} onChange={this.onChange} className="controls">
           <FormControlLabel
             value={themes.LIGHT}
             label={translate('Light')}
@@ -40,7 +40,7 @@ class ThemesSelection extends React.PureComponent {
 }
 
 ThemesSelection.propTypes = {
-  current: PropTypes.string.isRequired,
+  currentTheme: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   translate: PropTypes.func.isRequired,
   className: PropTypes.string

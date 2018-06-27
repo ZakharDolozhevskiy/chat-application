@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Select from "@material-ui/core/es/Select/Select";
-import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
-import InputLabel from "@material-ui/core/es/InputLabel/InputLabel";
-import FormControl from "@material-ui/core/es/FormControl/FormControl";
+import Select from "@material-ui/core/Select/Select";
+import MenuItem from "@material-ui/core/MenuItem/MenuItem";
+import InputLabel from "@material-ui/core/InputLabel/InputLabel";
+import FormControl from "@material-ui/core/FormControl/FormControl";
 
 import { lang } from '../../config';
 
-class LanguageSelection extends React.PureComponent {
+export class LanguageSelection extends React.PureComponent {
   onChange = (event) =>
     this.props.onChange(event.target.value);
 
@@ -46,6 +46,8 @@ LanguageSelection.propTypes = {
 };
 
 export default styled(LanguageSelection)`
+  width: 100%;
+
   .language-select-label {
     color: ${p => p.theme.textColor} !important;
   }

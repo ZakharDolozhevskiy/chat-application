@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ShortcutsSelection/> should render component 1`] = `
+<div
+  className=""
+>
+  <WithStyles(Typography)
+    className="label"
+    color="inherit"
+    component="p"
+  >
+    Interface colors
+  </WithStyles(Typography)>
+  <RadioGroup
+    className="controls"
+    onChange={[Function]}
+    value="light"
+  >
+    <WithStyles(FormControlLabel)
+      control={
+        <WithStyles(Radio)
+          className="selection-radio"
+        />
+      }
+      label="Light"
+      value="light"
+    />
+    <WithStyles(FormControlLabel)
+      control={
+        <WithStyles(Radio)
+          className="selection-radio"
+        />
+      }
+      label="Dark"
+      value="dark"
+    />
+  </RadioGroup>
+</div>
+`;

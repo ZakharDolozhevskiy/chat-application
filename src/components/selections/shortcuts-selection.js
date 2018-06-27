@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Radio from '@material-ui/core/es/Radio/Radio';
+import Radio from '@material-ui/core/Radio/Radio';
 import Typography from '@material-ui/core/Typography';
-import RadioGroup from '@material-ui/core/es/RadioGroup/RadioGroup';
-import FormControlLabel from '@material-ui/core/es/FormControlLabel/FormControlLabel';
+import RadioGroup from '@material-ui/core/RadioGroup/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel/FormControlLabel';
 
 import { baseStyles } from './styles';
 
-class ShortcutsSelection extends React.PureComponent {
+export class ShortcutsSelection extends React.PureComponent {
   onChange = (event, theme) =>
     this.props.onChange(theme);
 

@@ -9,15 +9,13 @@ const styles = css`
   flex-direction: column;
   width: 100%;
   padding: 16px;
-  z-index: 2001;
   color: ${p => p.theme.textColor};
   background-color: ${p => p.theme.backgroundColor};
+  height: calc(100vh - 64px);
+  overflow-y: auto;
 
   .settings-box {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - ${headerHeight});
+
   }
 
   .username-field {
@@ -34,6 +32,7 @@ const styles = css`
   }
 
   .reset-btn {
+    width: 100%;
     margin: 16px 0;
     border-color: ${p => p.theme.inputColor}; 
   }

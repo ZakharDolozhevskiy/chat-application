@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import Icon from '@material-ui/core/Icon';
 import Tooltip from '@material-ui/core/Tooltip';
 import Popover from '@material-ui/core/Popover';
-import TextField from "@material-ui/core/es/TextField/TextField";
+import TextField from "@material-ui/core/TextField/TextField";
 import IconButton from '@material-ui/core/IconButton';
 import EmojiPicker from 'emoji-picker-react';
 

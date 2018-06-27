@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LanguageSelection/> should render component 1`] = `
+<WithStyles(FormControl)
+  className=""
+>
+  <WithStyles(InputLabel)
+    className="language-select-label"
+    htmlFor="language-select"
+  >
+    Language
+    :
+  </WithStyles(InputLabel)>
+  <WithStyles(Select)
+    className="language-select"
+    classes={
+      Object {
+        "icon": "language-select-icon",
+      }
+    }
+    inputProps={
+      Object {
+        "id": "language-select",
+      }
+    }
+    onChange={[Function]}
+    value="en"
+  >
+    <WithStyles(MenuItem)
+      value="en"
+    >
+      English
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      value="ua"
+    >
+      Ukrainian
+    </WithStyles(MenuItem)>
+  </WithStyles(Select)>
+</WithStyles(FormControl)>
+`;

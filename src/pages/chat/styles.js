@@ -21,7 +21,6 @@ const styles = css`
     justify-content: space-between;
     
     button {
-      z-index: 2000;
       color: ${p => p.theme.inputColor};
     }
   }

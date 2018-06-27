@@ -12,6 +12,7 @@ export default css`
     margin: 0 10px;
     border-radius: 2px;
     position: relative;
+    word-break: break-all;
     color: ${p => p.theme.textColor};
     background: ${p => p.theme.backgroundColor};
     border: 2px solid ${p => p.theme.secondary};

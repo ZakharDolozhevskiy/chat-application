@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Radio from '@material-ui/core/es/Radio/Radio';
+import Radio from '@material-ui/core/Radio/Radio';
 import Typography from '@material-ui/core/Typography';
-import RadioGroup from '@material-ui/core/es/RadioGroup/RadioGroup';
-import FormControlLabel from '@material-ui/core/es/FormControlLabel/FormControlLabel';
+import RadioGroup from '@material-ui/core/RadioGroup/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel/FormControlLabel';
 
 import { baseStyles } from './styles';
 import { timeFormats } from '../../config';
 
-class FormatSelection extends React.PureComponent {
-  onChange = (event, theme) =>
-    this.props.onChange(theme);
+export class FormatSelection extends React.PureComponent {
+  onChange = (event, timeFormat) =>
+    this.props.onChange(timeFormat);
 
   render() {
     const { className, translate, timeFormat } = this.props;

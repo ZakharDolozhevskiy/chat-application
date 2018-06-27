@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormatSelection/> should render component 1`] = `
+<div
+  className=""
+>
+  <WithStyles(Typography)
+    className="label"
+    color="inherit"
+    component="p"
+  >
+    Clock displays
+    :
+  </WithStyles(Typography)>
+  <RadioGroup
+    className="controls"
+    onChange={[Function]}
+    value="HH:mm"
+  >
+    <WithStyles(FormControlLabel)
+      control={
+        <WithStyles(Radio)
+          className="selection-radio"
+        />
+      }
+      label="12 Hours"
+      value="hh:mm a"
+    />
+    <WithStyles(FormControlLabel)
+      control={
+        <WithStyles(Radio)
+          className="selection-radio"
+        />
+      }
+      label="24 Hours"
+      value="HH:mm"
+    />
+  </RadioGroup>
+</div>
+`;

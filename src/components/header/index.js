@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { NavLink } from "react-router-dom";
 import Badge from '@material-ui/core/Badge';
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import { NavLink } from 'react-router-dom';
 
 import { routes } from '../../config';
 import TranslatorContext from '../../translator/translator-context';

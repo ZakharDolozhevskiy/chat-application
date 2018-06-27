@@ -8,7 +8,7 @@ import Header from '../components/header/index';
 import Settings from './settings';
 import { routes } from '../config';
 
-const root = ({ path, counter, className }) => (
+export const root = ({ path, counter, className }) => (
   <section className={className}>
     <Header counter={counter} path={path}/>
     <Route path={routes.MAIN} component={Chat}/>

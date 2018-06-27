@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import Button from "@material-ui/core/es/Button/Button";
-import TextField from "@material-ui/core/es/TextField/TextField";
+import Button from "@material-ui/core/Button/Button";
+import TextField from "@material-ui/core/TextField/TextField";
 import ThemesSelection from '../../components/selections/themes-selection';
 import FormatSelection from '../../components/selections/format-selection';
 import LanguageSelection from '../../components/selections/language-selection';
@@ -37,9 +37,9 @@ export class Settings extends React.Component {
               />
               <ThemesSelection
                 translate={translate}
-                current={settings.theme}
                 language={settings.language}
                 onChange={this.props.changeTheme}
+                currentTheme={settings.theme}
               />
               <FormatSelection
                 translate={translate}

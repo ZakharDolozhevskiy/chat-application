@@ -1,0 +1,403 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header/> should render link wrapped with <a/> if image links provided 1`] = `
+<div
+  className="me"
+>
+  <div
+    className="message-body"
+  >
+    <WithStyles(Typography)
+      className="meta"
+      variant="caption"
+    >
+      <span />
+      <span>
+        00:00
+      </span>
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      color="inherit"
+      component="div"
+      variant="body1"
+    >
+      <a
+        className="image-link"
+        href="link to img 1"
+        key="0"
+        target="_blank"
+      >
+        <img
+          alt=""
+          src="link to img 1"
+        />
+      </a>
+      <a
+        className="image-link"
+        href="link to img 2"
+        key="1"
+        target="_blank"
+      >
+        <img
+          alt=""
+          src="link to img 2"
+        />
+      </a>
+      <div
+        className="player-wrapper"
+        key="0"
+      >
+        <ReactPlayer
+          className="player"
+          config={
+            Object {
+              "dailymotion": Object {
+                "params": Object {
+                  "api": 1,
+                  "endscreen-enable": false,
+                },
+                "preload": false,
+              },
+              "facebook": Object {
+                "appId": "1309697205772819",
+              },
+              "file": Object {
+                "attributes": Object {},
+                "forceAudio": false,
+                "forceDASH": false,
+                "forceHLS": false,
+                "forceVideo": false,
+                "hlsOptions": Object {},
+                "tracks": Array [],
+              },
+              "mixcloud": Object {
+                "options": Object {
+                  "hide_cover": 1,
+                },
+              },
+              "soundcloud": Object {
+                "options": Object {
+                  "buying": false,
+                  "download": false,
+                  "liking": false,
+                  "sharing": false,
+                  "show_comments": false,
+                  "show_playcount": false,
+                  "visual": true,
+                },
+              },
+              "twitch": Object {
+                "options": Object {},
+              },
+              "vimeo": Object {
+                "playerOptions": Object {
+                  "autopause": false,
+                  "byline": false,
+                  "portrait": false,
+                  "title": false,
+                },
+                "preload": false,
+              },
+              "wistia": Object {
+                "options": Object {},
+              },
+              "youtube": Object {
+                "playerVars": Object {
+                  "iv_load_policy": 3,
+                  "modestbranding": 1,
+                  "playsinline": 1,
+                  "rel": 0,
+                  "showinfo": 0,
+                },
+                "preload": false,
+              },
+            }
+          }
+          controls={false}
+          height="100%"
+          loop={false}
+          muted={false}
+          onBuffer={[Function]}
+          onDuration={[Function]}
+          onEnded={[Function]}
+          onError={[Function]}
+          onPause={[Function]}
+          onPlay={[Function]}
+          onProgress={[Function]}
+          onReady={[Function]}
+          onSeek={[Function]}
+          onStart={[Function]}
+          playbackRate={1}
+          playing={false}
+          playsinline={false}
+          progressInterval={1000}
+          style={Object {}}
+          url="youtube link"
+          volume={null}
+          width="100%"
+          wrapper="div"
+        />
+      </div>
+      <Linkify
+        className="Linkify"
+        component="a"
+        properties={
+          Object {
+            "target": "_blank",
+          }
+        }
+      >
+        https://momentjs.com/
+      </Linkify>
+    </WithStyles(Typography)>
+  </div>
+</div>
+`;
+
+exports[`<Header/> should render message component 1`] = `
+<div
+  className=""
+>
+  <div
+    className="message-body"
+  >
+    <WithStyles(Typography)
+      className="meta"
+      variant="caption"
+    >
+      <span>
+        Sender
+      </span>
+      <span>
+        00:00
+      </span>
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      color="inherit"
+      component="div"
+      variant="body1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Header/> should render own messages without username 1`] = `
+<div
+  className="me"
+>
+  <div
+    className="message-body"
+  >
+    <WithStyles(Typography)
+      className="meta"
+      variant="caption"
+    >
+      <span />
+      <span>
+        00:00
+      </span>
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      color="inherit"
+      component="div"
+      variant="body1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Header/> should render plain text in the component 1`] = `
+<div
+  className=""
+>
+  <div
+    className="message-body"
+  >
+    <WithStyles(Typography)
+      className="meta"
+      variant="caption"
+    >
+      <span>
+        Sender
+      </span>
+      <span>
+        00:00
+      </span>
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      color="inherit"
+      component="div"
+      variant="body1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Header/> should render text with url in <a/> tag with target = _blank 1`] = `
+<div
+  className="me"
+>
+  <div
+    className="message-body"
+  >
+    <WithStyles(Typography)
+      className="meta"
+      variant="caption"
+    >
+      <span />
+      <span>
+        00:00
+      </span>
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      color="inherit"
+      component="div"
+      variant="body1"
+    >
+      <Linkify
+        className="Linkify"
+        component="a"
+        properties={
+          Object {
+            "target": "_blank",
+          }
+        }
+      >
+        https://momentjs.com/
+      </Linkify>
+    </WithStyles(Typography)>
+  </div>
+</div>
+`;
+
+exports[`<Header/> should render video player if youtube links provided 1`] = `
+<div
+  className="me"
+>
+  <div
+    className="message-body"
+  >
+    <WithStyles(Typography)
+      className="meta"
+      variant="caption"
+    >
+      <span />
+      <span>
+        00:00
+      </span>
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      color="inherit"
+      component="div"
+      variant="body1"
+    >
+      <div
+        className="player-wrapper"
+        key="0"
+      >
+        <ReactPlayer
+          className="player"
+          config={
+            Object {
+              "dailymotion": Object {
+                "params": Object {
+                  "api": 1,
+                  "endscreen-enable": false,
+                },
+                "preload": false,
+              },
+              "facebook": Object {
+                "appId": "1309697205772819",
+              },
+              "file": Object {
+                "attributes": Object {},
+                "forceAudio": false,
+                "forceDASH": false,
+                "forceHLS": false,
+                "forceVideo": false,
+                "hlsOptions": Object {},
+                "tracks": Array [],
+              },
+              "mixcloud": Object {
+                "options": Object {
+                  "hide_cover": 1,
+                },
+              },
+              "soundcloud": Object {
+                "options": Object {
+                  "buying": false,
+                  "download": false,
+                  "liking": false,
+                  "sharing": false,
+                  "show_comments": false,
+                  "show_playcount": false,
+                  "visual": true,
+                },
+              },
+              "twitch": Object {
+                "options": Object {},
+              },
+              "vimeo": Object {
+                "playerOptions": Object {
+                  "autopause": false,
+                  "byline": false,
+                  "portrait": false,
+                  "title": false,
+                },
+                "preload": false,
+              },
+              "wistia": Object {
+                "options": Object {},
+              },
+              "youtube": Object {
+                "playerVars": Object {
+                  "iv_load_policy": 3,
+                  "modestbranding": 1,
+                  "playsinline": 1,
+                  "rel": 0,
+                  "showinfo": 0,
+                },
+                "preload": false,
+              },
+            }
+          }
+          controls={false}
+          height="100%"
+          loop={false}
+          muted={false}
+          onBuffer={[Function]}
+          onDuration={[Function]}
+          onEnded={[Function]}
+          onError={[Function]}
+          onPause={[Function]}
+          onPlay={[Function]}
+          onProgress={[Function]}
+          onReady={[Function]}
+          onSeek={[Function]}
+          onStart={[Function]}
+          playbackRate={1}
+          playing={false}
+          playsinline={false}
+          progressInterval={1000}
+          style={Object {}}
+          url="youtube link"
+          volume={null}
+          width="100%"
+          wrapper="div"
+        />
+      </div>
+      <Linkify
+        className="Linkify"
+        component="a"
+        properties={
+          Object {
+            "target": "_blank",
+          }
+        }
+      >
+        https://momentjs.com/
+      </Linkify>
+    </WithStyles(Typography)>
+  </div>
+</div>
+`;
