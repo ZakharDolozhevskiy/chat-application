@@ -8,21 +8,27 @@ import Header from '../components/header/index';
 import Settings from './settings';
 import { routes } from '../config';
 
-export const root = ({ path, counter, className }) => (
-  <section className={className}>
-    <Header counter={counter} path={path}/>
-    <Route path={routes.MAIN} component={Chat}/>
-    <Route path={routes.SETTINGS} component={Settings}/>
-  </section>
-);
+export class Root extends React.PureComponent {
+  render() {
+    const { path, counter, className } = this.props;
 
-root.propTypes = {
+    return (
+      <section className={className}>
+        <Header counter={counter} path={path}/>
+        <Route path={routes.MAIN} component={Chat}/>
+        <Route path={routes.SETTINGS} component={Settings}/>
+      </section>
+    );
+  }
+}
+
+Root.propTypes = {
   path: PropTypes.string.isRequired,
   counter: PropTypes.number.isRequired,
   className: PropTypes.string
 };
 
-export default styled(root)`
+export default styled(Root)`
     display: flex;
     flex-direction: column;
     box-sizing: border-box;

@@ -43,7 +43,11 @@ export class Chat extends React.Component {
     isEnterKey(ev) && this.sendMessage();
 
   onEmojiSelect = (code, { name }) =>
-    this.setState({ message: this.state.message + ` :${name}:` });
+    this.setState({
+      message: this.state.message
+        ? `${this.state.message} :${name}:`
+        : `:${name}:`
+    });
 
   trackHotKeys = throttle((ev) => {
     if (this.props.hotKeys && isEnterKey(ev) && isCtrlKey(ev)) {
@@ -125,7 +129,10 @@ export class Chat extends React.Component {
                 anchorOrigin={this.anchorOrigin}
                 transformOrigin={this.transformOrigin}
               >
-                <EmojiPicker onEmojiClick={this.onEmojiSelect}/>
+                <EmojiPicker
+                  className="emoji-picker"
+                  onEmojiClick={this.onEmojiSelect}
+                />
               </Popover>
             </div>
           </section>

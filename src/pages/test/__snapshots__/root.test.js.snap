@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Root/> should render root component 1`] = `
+<section
+  className=""
+>
+  <Styled(Header)
+    counter={0}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    path="/settings"
+  />
+</section>
+`;
