@@ -94,7 +94,7 @@ Settings.propTypes = {
   toggleHotKeys: PropTypes.func.isRequired,
   changeUserName: PropTypes.func.isRequired,
   changeLanguage: PropTypes.func.isRequired,
-  changeTimeFormat: PropTypes.func.isRequired,
+  changeTimeFormat: PropTypes.func.isRequired
 };
 
 const styledSettings = styled(Settings)`${styles}`;

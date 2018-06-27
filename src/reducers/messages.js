@@ -1,7 +1,7 @@
 import { MESSAGE_READ, MESSAGE_SEND } from '../actions/messages';
 import { LOCATION_CHANGE } from 'connected-react-router';
 
-const defaultState = { count: 0, data: [] };
+export const defaultState = { count: 0, data: [] };
 
 const messages = (state = defaultState, { type, payload }) => {
   if (type === LOCATION_CHANGE) {
