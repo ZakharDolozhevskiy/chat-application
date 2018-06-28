@@ -5,6 +5,10 @@ export const headerHeight = '64px';
 export default css`
   background-color: #2196f3 !important;
 
+  & > div {
+    height: ${headerHeight};
+  }
+
   .nav-link {
     display: inline-block;
     margin-right: 8px;
@@ -30,6 +34,7 @@ export default css`
   @media (max-width: 600px) {
     & > div {
       padding: 0 4px;
+      min-height: 56px;
     }
 
     .badge > span {

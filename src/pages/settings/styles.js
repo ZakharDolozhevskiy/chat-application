@@ -11,7 +11,7 @@ const styles = css`
   padding: 16px;
   color: ${p => p.theme.textColor};
   background-color: ${p => p.theme.backgroundColor};
-  height: calc(100vh - 64px);
+  height: calc(100vh - ${headerHeight});
   overflow-y: auto;
 
   .settings-box {
