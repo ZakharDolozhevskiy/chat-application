@@ -2,10 +2,10 @@
 
 Socket.io based chat application. The application supports desktop and mobile devices.
 
-* [Features](#features) – Implemented features
-* [Get started](#get-started) – How to start development
-* [Development](#development) – Development notes
-* [Tests](#testing) - Testing notes
+* [Features](#features)
+* [Get started](#get-started)
+* [Development](#development)
+* [Tests](#testing)
 
 ## Features
 
@@ -63,7 +63,7 @@ Development dependencies and scripts description
 * [React create app](https://github.com/facebook/create-react-app)
 * [React app rewired](https://github.com/timarney/react-app-rewired)
 
-## Structure
+### Structure
 
 ```
 chat-application

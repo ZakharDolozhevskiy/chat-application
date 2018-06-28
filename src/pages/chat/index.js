@@ -56,7 +56,7 @@ export class Chat extends React.Component {
   }, 400);
 
   sendMessage = () => {
-    if (this.state.message) {
+    if (this.state.message && this.props.path === routes.MAIN) {
       this.props.sendMessage({
         message: this.state.message,
         username: this.props.username

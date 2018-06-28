@@ -99,28 +99,30 @@ exports[`<Header/> should render header component 1`] = `
                         <Button
                           classes={
                             Object {
-                              "colorInherit": "MuiButton-colorInherit-46",
+                              "colorInherit": "MuiButton-colorInherit-57",
                               "contained": "MuiButton-contained-47",
                               "containedPrimary": "MuiButton-containedPrimary-48",
                               "containedSecondary": "MuiButton-containedSecondary-49",
-                              "disabled": "MuiButton-disabled-54",
-                              "fab": "MuiButton-fab-55",
-                              "flat": "MuiButton-flat-42",
-                              "flatPrimary": "MuiButton-flatPrimary-43",
-                              "flatSecondary": "MuiButton-flatSecondary-44",
-                              "focusVisible": "MuiButton-focusVisible-53",
-                              "fullWidth": "MuiButton-fullWidth-59",
+                              "disabled": "MuiButton-disabled-56",
+                              "extendedFab": "MuiButton-extendedFab-54",
+                              "fab": "MuiButton-fab-53",
+                              "flat": "MuiButton-flat-43",
+                              "flatPrimary": "MuiButton-flatPrimary-44",
+                              "flatSecondary": "MuiButton-flatSecondary-45",
+                              "focusVisible": "MuiButton-focusVisible-55",
+                              "fullWidth": "MuiButton-fullWidth-61",
                               "label": "MuiButton-label-39",
-                              "mini": "MuiButton-mini-56",
-                              "outlined": "MuiButton-outlined-45",
+                              "mini": "MuiButton-mini-58",
+                              "outlined": "MuiButton-outlined-46",
                               "raised": "MuiButton-raised-50",
                               "raisedPrimary": "MuiButton-raisedPrimary-51",
                               "raisedSecondary": "MuiButton-raisedSecondary-52",
                               "root": "MuiButton-root-38",
-                              "sizeLarge": "MuiButton-sizeLarge-58",
-                              "sizeSmall": "MuiButton-sizeSmall-57",
-                              "textPrimary": "MuiButton-textPrimary-40",
-                              "textSecondary": "MuiButton-textSecondary-41",
+                              "sizeLarge": "MuiButton-sizeLarge-60",
+                              "sizeSmall": "MuiButton-sizeSmall-59",
+                              "text": "MuiButton-text-40",
+                              "textPrimary": "MuiButton-textPrimary-41",
+                              "textSecondary": "MuiButton-textSecondary-42",
                             }
                           }
                           color="inherit"
@@ -134,21 +136,21 @@ exports[`<Header/> should render header component 1`] = `
                           variant="text"
                         >
                           <WithStyles(ButtonBase)
-                            className="MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                            className="MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                             component="button"
                             disabled={false}
                             focusRipple={true}
-                            focusVisibleClassName="MuiButton-focusVisible-53"
+                            focusVisibleClassName="MuiButton-focusVisible-55"
                             type="button"
                           >
                             <ButtonBase
                               centerRipple={false}
-                              className="MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                              className="MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                               classes={
                                 Object {
-                                  "disabled": "MuiButtonBase-disabled-61",
-                                  "focusVisible": "MuiButtonBase-focusVisible-62",
-                                  "root": "MuiButtonBase-root-60",
+                                  "disabled": "MuiButtonBase-disabled-63",
+                                  "focusVisible": "MuiButtonBase-focusVisible-64",
+                                  "root": "MuiButtonBase-root-62",
                                 }
                               }
                               component="button"
@@ -156,12 +158,12 @@ exports[`<Header/> should render header component 1`] = `
                               disableTouchRipple={false}
                               disabled={false}
                               focusRipple={true}
-                              focusVisibleClassName="MuiButton-focusVisible-53"
+                              focusVisibleClassName="MuiButton-focusVisible-55"
                               tabIndex="0"
                               type="button"
                             >
                               <button
-                                className="MuiButtonBase-root-60 MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                                className="MuiButtonBase-root-62 MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                                 disabled={false}
                                 onBlur={[Function]}
                                 onFocus={[Function]}
@@ -189,25 +191,25 @@ exports[`<Header/> should render header component 1`] = `
                                     center={false}
                                     classes={
                                       Object {
-                                        "child": "MuiTouchRipple-child-67",
-                                        "childLeaving": "MuiTouchRipple-childLeaving-68",
-                                        "childPulsate": "MuiTouchRipple-childPulsate-69",
-                                        "ripple": "MuiTouchRipple-ripple-64",
-                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-66",
-                                        "rippleVisible": "MuiTouchRipple-rippleVisible-65",
-                                        "root": "MuiTouchRipple-root-63",
+                                        "child": "MuiTouchRipple-child-69",
+                                        "childLeaving": "MuiTouchRipple-childLeaving-70",
+                                        "childPulsate": "MuiTouchRipple-childPulsate-71",
+                                        "ripple": "MuiTouchRipple-ripple-66",
+                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-68",
+                                        "rippleVisible": "MuiTouchRipple-rippleVisible-67",
+                                        "root": "MuiTouchRipple-root-65",
                                       }
                                     }
                                   >
                                     <TransitionGroup
                                       childFactory={[Function]}
-                                      className="MuiTouchRipple-root-63"
+                                      className="MuiTouchRipple-root-65"
                                       component="span"
                                       enter={true}
                                       exit={true}
                                     >
                                       <span
-                                        className="MuiTouchRipple-root-63"
+                                        className="MuiTouchRipple-root-65"
                                       />
                                     </TransitionGroup>
                                   </TouchRipple>
@@ -229,28 +231,30 @@ exports[`<Header/> should render header component 1`] = `
                         <Button
                           classes={
                             Object {
-                              "colorInherit": "MuiButton-colorInherit-46",
+                              "colorInherit": "MuiButton-colorInherit-57",
                               "contained": "MuiButton-contained-47",
                               "containedPrimary": "MuiButton-containedPrimary-48",
                               "containedSecondary": "MuiButton-containedSecondary-49",
-                              "disabled": "MuiButton-disabled-54",
-                              "fab": "MuiButton-fab-55",
-                              "flat": "MuiButton-flat-42",
-                              "flatPrimary": "MuiButton-flatPrimary-43",
-                              "flatSecondary": "MuiButton-flatSecondary-44",
-                              "focusVisible": "MuiButton-focusVisible-53",
-                              "fullWidth": "MuiButton-fullWidth-59",
+                              "disabled": "MuiButton-disabled-56",
+                              "extendedFab": "MuiButton-extendedFab-54",
+                              "fab": "MuiButton-fab-53",
+                              "flat": "MuiButton-flat-43",
+                              "flatPrimary": "MuiButton-flatPrimary-44",
+                              "flatSecondary": "MuiButton-flatSecondary-45",
+                              "focusVisible": "MuiButton-focusVisible-55",
+                              "fullWidth": "MuiButton-fullWidth-61",
                               "label": "MuiButton-label-39",
-                              "mini": "MuiButton-mini-56",
-                              "outlined": "MuiButton-outlined-45",
+                              "mini": "MuiButton-mini-58",
+                              "outlined": "MuiButton-outlined-46",
                               "raised": "MuiButton-raised-50",
                               "raisedPrimary": "MuiButton-raisedPrimary-51",
                               "raisedSecondary": "MuiButton-raisedSecondary-52",
                               "root": "MuiButton-root-38",
-                              "sizeLarge": "MuiButton-sizeLarge-58",
-                              "sizeSmall": "MuiButton-sizeSmall-57",
-                              "textPrimary": "MuiButton-textPrimary-40",
-                              "textSecondary": "MuiButton-textSecondary-41",
+                              "sizeLarge": "MuiButton-sizeLarge-60",
+                              "sizeSmall": "MuiButton-sizeSmall-59",
+                              "text": "MuiButton-text-40",
+                              "textPrimary": "MuiButton-textPrimary-41",
+                              "textSecondary": "MuiButton-textSecondary-42",
                             }
                           }
                           color="inherit"
@@ -264,21 +268,21 @@ exports[`<Header/> should render header component 1`] = `
                           variant="text"
                         >
                           <WithStyles(ButtonBase)
-                            className="MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                            className="MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                             component="button"
                             disabled={false}
                             focusRipple={true}
-                            focusVisibleClassName="MuiButton-focusVisible-53"
+                            focusVisibleClassName="MuiButton-focusVisible-55"
                             type="button"
                           >
                             <ButtonBase
                               centerRipple={false}
-                              className="MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                              className="MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                               classes={
                                 Object {
-                                  "disabled": "MuiButtonBase-disabled-61",
-                                  "focusVisible": "MuiButtonBase-focusVisible-62",
-                                  "root": "MuiButtonBase-root-60",
+                                  "disabled": "MuiButtonBase-disabled-63",
+                                  "focusVisible": "MuiButtonBase-focusVisible-64",
+                                  "root": "MuiButtonBase-root-62",
                                 }
                               }
                               component="button"
@@ -286,12 +290,12 @@ exports[`<Header/> should render header component 1`] = `
                               disableTouchRipple={false}
                               disabled={false}
                               focusRipple={true}
-                              focusVisibleClassName="MuiButton-focusVisible-53"
+                              focusVisibleClassName="MuiButton-focusVisible-55"
                               tabIndex="0"
                               type="button"
                             >
                               <button
-                                className="MuiButtonBase-root-60 MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                                className="MuiButtonBase-root-62 MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                                 disabled={false}
                                 onBlur={[Function]}
                                 onFocus={[Function]}
@@ -319,25 +323,25 @@ exports[`<Header/> should render header component 1`] = `
                                     center={false}
                                     classes={
                                       Object {
-                                        "child": "MuiTouchRipple-child-67",
-                                        "childLeaving": "MuiTouchRipple-childLeaving-68",
-                                        "childPulsate": "MuiTouchRipple-childPulsate-69",
-                                        "ripple": "MuiTouchRipple-ripple-64",
-                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-66",
-                                        "rippleVisible": "MuiTouchRipple-rippleVisible-65",
-                                        "root": "MuiTouchRipple-root-63",
+                                        "child": "MuiTouchRipple-child-69",
+                                        "childLeaving": "MuiTouchRipple-childLeaving-70",
+                                        "childPulsate": "MuiTouchRipple-childPulsate-71",
+                                        "ripple": "MuiTouchRipple-ripple-66",
+                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-68",
+                                        "rippleVisible": "MuiTouchRipple-rippleVisible-67",
+                                        "root": "MuiTouchRipple-root-65",
                                       }
                                     }
                                   >
                                     <TransitionGroup
                                       childFactory={[Function]}
-                                      className="MuiTouchRipple-root-63"
+                                      className="MuiTouchRipple-root-65"
                                       component="span"
                                       enter={true}
                                       exit={true}
                                     >
                                       <span
-                                        className="MuiTouchRipple-root-63"
+                                        className="MuiTouchRipple-root-65"
                                       />
                                     </TransitionGroup>
                                   </TouchRipple>
@@ -462,18 +466,18 @@ exports[`<Header/> should render header with unread messages badge 1`] = `
                           className="badge"
                           classes={
                             Object {
-                              "badge": "MuiBadge-badge-71",
-                              "colorError": "MuiBadge-colorError-74",
-                              "colorPrimary": "MuiBadge-colorPrimary-72",
-                              "colorSecondary": "MuiBadge-colorSecondary-73",
-                              "root": "MuiBadge-root-70",
+                              "badge": "MuiBadge-badge-73",
+                              "colorError": "MuiBadge-colorError-76",
+                              "colorPrimary": "MuiBadge-colorPrimary-74",
+                              "colorSecondary": "MuiBadge-colorSecondary-75",
+                              "root": "MuiBadge-root-72",
                             }
                           }
                           color="default"
                           component="span"
                         >
                           <span
-                            className="MuiBadge-root-70 badge"
+                            className="MuiBadge-root-72 badge"
                           >
                             <WithStyles(Button)
                               color="inherit"
@@ -481,28 +485,30 @@ exports[`<Header/> should render header with unread messages badge 1`] = `
                               <Button
                                 classes={
                                   Object {
-                                    "colorInherit": "MuiButton-colorInherit-46",
+                                    "colorInherit": "MuiButton-colorInherit-57",
                                     "contained": "MuiButton-contained-47",
                                     "containedPrimary": "MuiButton-containedPrimary-48",
                                     "containedSecondary": "MuiButton-containedSecondary-49",
-                                    "disabled": "MuiButton-disabled-54",
-                                    "fab": "MuiButton-fab-55",
-                                    "flat": "MuiButton-flat-42",
-                                    "flatPrimary": "MuiButton-flatPrimary-43",
-                                    "flatSecondary": "MuiButton-flatSecondary-44",
-                                    "focusVisible": "MuiButton-focusVisible-53",
-                                    "fullWidth": "MuiButton-fullWidth-59",
+                                    "disabled": "MuiButton-disabled-56",
+                                    "extendedFab": "MuiButton-extendedFab-54",
+                                    "fab": "MuiButton-fab-53",
+                                    "flat": "MuiButton-flat-43",
+                                    "flatPrimary": "MuiButton-flatPrimary-44",
+                                    "flatSecondary": "MuiButton-flatSecondary-45",
+                                    "focusVisible": "MuiButton-focusVisible-55",
+                                    "fullWidth": "MuiButton-fullWidth-61",
                                     "label": "MuiButton-label-39",
-                                    "mini": "MuiButton-mini-56",
-                                    "outlined": "MuiButton-outlined-45",
+                                    "mini": "MuiButton-mini-58",
+                                    "outlined": "MuiButton-outlined-46",
                                     "raised": "MuiButton-raised-50",
                                     "raisedPrimary": "MuiButton-raisedPrimary-51",
                                     "raisedSecondary": "MuiButton-raisedSecondary-52",
                                     "root": "MuiButton-root-38",
-                                    "sizeLarge": "MuiButton-sizeLarge-58",
-                                    "sizeSmall": "MuiButton-sizeSmall-57",
-                                    "textPrimary": "MuiButton-textPrimary-40",
-                                    "textSecondary": "MuiButton-textSecondary-41",
+                                    "sizeLarge": "MuiButton-sizeLarge-60",
+                                    "sizeSmall": "MuiButton-sizeSmall-59",
+                                    "text": "MuiButton-text-40",
+                                    "textPrimary": "MuiButton-textPrimary-41",
+                                    "textSecondary": "MuiButton-textSecondary-42",
                                   }
                                 }
                                 color="inherit"
@@ -516,21 +522,21 @@ exports[`<Header/> should render header with unread messages badge 1`] = `
                                 variant="text"
                               >
                                 <WithStyles(ButtonBase)
-                                  className="MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                                  className="MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                                   component="button"
                                   disabled={false}
                                   focusRipple={true}
-                                  focusVisibleClassName="MuiButton-focusVisible-53"
+                                  focusVisibleClassName="MuiButton-focusVisible-55"
                                   type="button"
                                 >
                                   <ButtonBase
                                     centerRipple={false}
-                                    className="MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                                    className="MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                                     classes={
                                       Object {
-                                        "disabled": "MuiButtonBase-disabled-61",
-                                        "focusVisible": "MuiButtonBase-focusVisible-62",
-                                        "root": "MuiButtonBase-root-60",
+                                        "disabled": "MuiButtonBase-disabled-63",
+                                        "focusVisible": "MuiButtonBase-focusVisible-64",
+                                        "root": "MuiButtonBase-root-62",
                                       }
                                     }
                                     component="button"
@@ -538,12 +544,12 @@ exports[`<Header/> should render header with unread messages badge 1`] = `
                                     disableTouchRipple={false}
                                     disabled={false}
                                     focusRipple={true}
-                                    focusVisibleClassName="MuiButton-focusVisible-53"
+                                    focusVisibleClassName="MuiButton-focusVisible-55"
                                     tabIndex="0"
                                     type="button"
                                   >
                                     <button
-                                      className="MuiButtonBase-root-60 MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                                      className="MuiButtonBase-root-62 MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                                       disabled={false}
                                       onBlur={[Function]}
                                       onFocus={[Function]}
@@ -571,25 +577,25 @@ exports[`<Header/> should render header with unread messages badge 1`] = `
                                           center={false}
                                           classes={
                                             Object {
-                                              "child": "MuiTouchRipple-child-67",
-                                              "childLeaving": "MuiTouchRipple-childLeaving-68",
-                                              "childPulsate": "MuiTouchRipple-childPulsate-69",
-                                              "ripple": "MuiTouchRipple-ripple-64",
-                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate-66",
-                                              "rippleVisible": "MuiTouchRipple-rippleVisible-65",
-                                              "root": "MuiTouchRipple-root-63",
+                                              "child": "MuiTouchRipple-child-69",
+                                              "childLeaving": "MuiTouchRipple-childLeaving-70",
+                                              "childPulsate": "MuiTouchRipple-childPulsate-71",
+                                              "ripple": "MuiTouchRipple-ripple-66",
+                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate-68",
+                                              "rippleVisible": "MuiTouchRipple-rippleVisible-67",
+                                              "root": "MuiTouchRipple-root-65",
                                             }
                                           }
                                         >
                                           <TransitionGroup
                                             childFactory={[Function]}
-                                            className="MuiTouchRipple-root-63"
+                                            className="MuiTouchRipple-root-65"
                                             component="span"
                                             enter={true}
                                             exit={true}
                                           >
                                             <span
-                                              className="MuiTouchRipple-root-63"
+                                              className="MuiTouchRipple-root-65"
                                             />
                                           </TransitionGroup>
                                         </TouchRipple>
@@ -600,7 +606,7 @@ exports[`<Header/> should render header with unread messages badge 1`] = `
                               </Button>
                             </WithStyles(Button)>
                             <span
-                              className="MuiBadge-badge-71"
+                              className="MuiBadge-badge-73"
                             >
                               10
                             </span>
@@ -619,28 +625,30 @@ exports[`<Header/> should render header with unread messages badge 1`] = `
                         <Button
                           classes={
                             Object {
-                              "colorInherit": "MuiButton-colorInherit-46",
+                              "colorInherit": "MuiButton-colorInherit-57",
                               "contained": "MuiButton-contained-47",
                               "containedPrimary": "MuiButton-containedPrimary-48",
                               "containedSecondary": "MuiButton-containedSecondary-49",
-                              "disabled": "MuiButton-disabled-54",
-                              "fab": "MuiButton-fab-55",
-                              "flat": "MuiButton-flat-42",
-                              "flatPrimary": "MuiButton-flatPrimary-43",
-                              "flatSecondary": "MuiButton-flatSecondary-44",
-                              "focusVisible": "MuiButton-focusVisible-53",
-                              "fullWidth": "MuiButton-fullWidth-59",
+                              "disabled": "MuiButton-disabled-56",
+                              "extendedFab": "MuiButton-extendedFab-54",
+                              "fab": "MuiButton-fab-53",
+                              "flat": "MuiButton-flat-43",
+                              "flatPrimary": "MuiButton-flatPrimary-44",
+                              "flatSecondary": "MuiButton-flatSecondary-45",
+                              "focusVisible": "MuiButton-focusVisible-55",
+                              "fullWidth": "MuiButton-fullWidth-61",
                               "label": "MuiButton-label-39",
-                              "mini": "MuiButton-mini-56",
-                              "outlined": "MuiButton-outlined-45",
+                              "mini": "MuiButton-mini-58",
+                              "outlined": "MuiButton-outlined-46",
                               "raised": "MuiButton-raised-50",
                               "raisedPrimary": "MuiButton-raisedPrimary-51",
                               "raisedSecondary": "MuiButton-raisedSecondary-52",
                               "root": "MuiButton-root-38",
-                              "sizeLarge": "MuiButton-sizeLarge-58",
-                              "sizeSmall": "MuiButton-sizeSmall-57",
-                              "textPrimary": "MuiButton-textPrimary-40",
-                              "textSecondary": "MuiButton-textSecondary-41",
+                              "sizeLarge": "MuiButton-sizeLarge-60",
+                              "sizeSmall": "MuiButton-sizeSmall-59",
+                              "text": "MuiButton-text-40",
+                              "textPrimary": "MuiButton-textPrimary-41",
+                              "textSecondary": "MuiButton-textSecondary-42",
                             }
                           }
                           color="inherit"
@@ -654,21 +662,21 @@ exports[`<Header/> should render header with unread messages badge 1`] = `
                           variant="text"
                         >
                           <WithStyles(ButtonBase)
-                            className="MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                            className="MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                             component="button"
                             disabled={false}
                             focusRipple={true}
-                            focusVisibleClassName="MuiButton-focusVisible-53"
+                            focusVisibleClassName="MuiButton-focusVisible-55"
                             type="button"
                           >
                             <ButtonBase
                               centerRipple={false}
-                              className="MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                              className="MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                               classes={
                                 Object {
-                                  "disabled": "MuiButtonBase-disabled-61",
-                                  "focusVisible": "MuiButtonBase-focusVisible-62",
-                                  "root": "MuiButtonBase-root-60",
+                                  "disabled": "MuiButtonBase-disabled-63",
+                                  "focusVisible": "MuiButtonBase-focusVisible-64",
+                                  "root": "MuiButtonBase-root-62",
                                 }
                               }
                               component="button"
@@ -676,12 +684,12 @@ exports[`<Header/> should render header with unread messages badge 1`] = `
                               disableTouchRipple={false}
                               disabled={false}
                               focusRipple={true}
-                              focusVisibleClassName="MuiButton-focusVisible-53"
+                              focusVisibleClassName="MuiButton-focusVisible-55"
                               tabIndex="0"
                               type="button"
                             >
                               <button
-                                className="MuiButtonBase-root-60 MuiButton-root-38 MuiButton-colorInherit-46 MuiButton-flat-42"
+                                className="MuiButtonBase-root-62 MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
                                 disabled={false}
                                 onBlur={[Function]}
                                 onFocus={[Function]}
@@ -709,25 +717,25 @@ exports[`<Header/> should render header with unread messages badge 1`] = `
                                     center={false}
                                     classes={
                                       Object {
-                                        "child": "MuiTouchRipple-child-67",
-                                        "childLeaving": "MuiTouchRipple-childLeaving-68",
-                                        "childPulsate": "MuiTouchRipple-childPulsate-69",
-                                        "ripple": "MuiTouchRipple-ripple-64",
-                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-66",
-                                        "rippleVisible": "MuiTouchRipple-rippleVisible-65",
-                                        "root": "MuiTouchRipple-root-63",
+                                        "child": "MuiTouchRipple-child-69",
+                                        "childLeaving": "MuiTouchRipple-childLeaving-70",
+                                        "childPulsate": "MuiTouchRipple-childPulsate-71",
+                                        "ripple": "MuiTouchRipple-ripple-66",
+                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-68",
+                                        "rippleVisible": "MuiTouchRipple-rippleVisible-67",
+                                        "root": "MuiTouchRipple-root-65",
                                       }
                                     }
                                   >
                                     <TransitionGroup
                                       childFactory={[Function]}
-                                      className="MuiTouchRipple-root-63"
+                                      className="MuiTouchRipple-root-65"
                                       component="span"
                                       enter={true}
                                       exit={true}
                                     >
                                       <span
-                                        className="MuiTouchRipple-root-63"
+                                        className="MuiTouchRipple-root-65"
                                       />
                                     </TransitionGroup>
                                   </TouchRipple>
